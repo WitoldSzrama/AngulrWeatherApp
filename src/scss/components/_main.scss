@@ -1,0 +1,88 @@
+.main-content{
+    margin:2rem;
+    margin-top: 5rem;
+    margin-bottom: 0rem;
+    display: inline-block;
+    text-align: center;
+    width: 95%;
+
+    &-side{
+        display: inline-block;
+        width:25%;
+    }
+    &-details{
+        display: inline-block;
+        width:75%;
+        vertical-align: top;
+        & h1{
+            font-size: 3rem;
+        }
+        & .col-1-of-3{
+            @include respond(tab-land) {
+                width: 100% !important;
+            }
+        }
+        & .main-box{
+            list-style: none;
+            background: rgba($color-blue-dark-2, .8);
+            text-transform: uppercase;
+            font-weight: 900;
+            height: 55rem;
+            padding: 2rem;
+            position: relative;
+            box-shadow: 0 1rem 2rem rgba($color-black, .3);
+
+            animation-name: popUp;
+            animation-duration: .8s;
+            animation-timing-function: linear;
+            
+            @include respond(tab-land){
+                margin-bottom:2rem;
+            }
+            &-content{
+              
+                
+                justify-content: center;
+                & h2{
+                    font-size: 2rem;
+                }
+                & img{
+
+                    width: 12rem;
+                }
+                & .summary{
+                    padding:3rem;
+                    margin: 1rem;
+                    font-size: 1.5rem;                    
+                }
+                .absolut-bottom{
+                    
+                    font-size: 1.5rem; 
+                }
+                
+            }
+            @include respond(tab-land){
+                height: auto;
+                & .summary{
+                    padding:2rem;
+                    margin: 0;
+                    text-align: center;
+                }
+                & img{
+                    width:10rem;
+                    float:left;
+                }
+                & h2{
+                    display: inline;
+                }
+
+            }
+        }
+    }
+}
+
+.save-button{
+    margin-top: 2rem;
+    width: 30%;
+
+}

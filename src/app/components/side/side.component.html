@@ -1,0 +1,11 @@
+<div class="main-content-side">
+        <div  class="side-item" *ngFor="let fav of favList; let i =index" style="cursor: pointer">
+            <div (click)="onDetail(fav)">
+                <p>{{fav.geocode.name}} <br> <span>{{fav.currently.temp | number:'1.0-0'}} &#8451; </span>  </p>
+                <img src="../assets/img/weather-icons/{{fav.currently.icon}}.png" alt="">
+            </div>
+
+            <i (click)="onDelete(i)" class="delete" >X</i>
+        </div>
+ 
+    </div>

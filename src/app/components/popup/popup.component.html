@@ -1,0 +1,22 @@
+<div class="popup">
+    <div (click)="onClick()" class="popup-background" [class.popup-background-active]="isActive"></div>
+    <div class="popup-content" *ngIf="results.length==0" [class.popup-content-active]="isActive">
+        <ul>
+            <li>
+                    <h4 class="popup-content-text">Brak wyników spróbuj czegoś innnego</h4>
+            </li>
+        </ul>
+        
+    </div>
+    <div class="popup-content" [class.popup-content-active]="isActive">
+        <div *ngFor="let result of results; let i = index">
+            <ul>
+                <li>
+                    <div (click)="searchResult(result)" class="popup-content-text"> {{result.name | slice: 0 :40 }}... </div>
+                </li>
+            </ul>
+        </div>
+       
+    </div>
+</div>
+

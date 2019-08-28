@@ -1,0 +1,51 @@
+<div class="main-content-details">
+        <div *ngIf="forecastDetails">
+            <h1> {{forecastDetails.geocode.name}} </h1>
+            <div class="row">
+                <div class="col-1-of-3">
+                    <div class="main-box">
+                        <div class="main-box-content">
+                                <h2> Obecnie </h2>
+                            <img src="../assets/img/weather-icons/{{forecastDetails.currently.icon}}.png" alt="">
+                            <h2 class="temp"> {{forecastDetails.currently.temp | number:'1.0-0'}} &#8451; </h2>
+                            <p class="summary">
+                                    {{forecastDetails.currently.summary}}
+                            </p>
+                            <p class="absolut-bottom">Opady: {{forecastDetails.currently.precip | number:'1.0-0'}}%</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1-of-3">
+                    <div class="main-box">
+                            <div class="main-box-content">
+                                    <h2> Dzisiaj </h2>
+                                    <img src="../assets/img/weather-icons/{{forecastDetails.hourly.icon }}.png" alt="">
+                                    <h2>{{forecastDetails.hourly.temp | number:'1.0-0'}} &#8451; </h2>
+                                    <p class="summary">
+                                        {{forecastDetails.hourly.summary}}
+                                    </p>
+                                    <p class="absolut-bottom">Opady: {{forecastDetails.hourly.precip | number:'1.0-0'}}%</p>
+                                </div>
+                    </div>
+                </div>
+                <div class="col-1-of-3">
+                    <div class="main-box">
+                            <div class="main-box-content">
+                                    <h2> W tygodniu </h2>
+                                    <img src="../assets/img/weather-icons/{{forecastDetails.daily.icon}}.png" alt="">
+                                    <!-- <h2>{{forecastDetails.daily.temp}} &#8451; </h2> -->
+                                    <p class="summary">
+                                        {{forecastDetails.daily.summary}}
+                                    </p>
+                                    <p class="absolut-bottom">Opady: {{forecastDetails.daily.precip | number:'1.0-0'}}%</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <button (click)="favouriteAdd(forecastDetails)" class=" form-group-btn save-button">Dodaj do ulubionych</button>
+
+        </div>
+
+    </div>
+   
+

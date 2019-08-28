@@ -1,0 +1,22 @@
+.header{
+    height: 6rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    & .heading-primary{ 
+        color: $color-white;
+        text-transform: uppercase;
+        backface-visibility: hidden;
+        font-weight: 900;
+        text-align: end;
+
+        @include respond(phone){
+            text-align: start;
+        }
+        &-main{
+            font-size: 3rem;
+            margin-bottom: 1rem;  
+        }
+    }
+
+}

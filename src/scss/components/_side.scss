@@ -1,0 +1,39 @@
+.main-content-side{
+    margin-top: 5rem;
+    @include respond(phone){
+        margin-top: 4rem;
+    }
+}
+
+.side-item{
+    font-size: 2rem;
+    font-weight: 900;
+    padding:1rem;
+    text-transform: capitalize;
+    background: rgba($color-blue-dark-2, .8);
+    position: relative;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    box-shadow: 0 2rem 4rem rgba($color-black, .15);
+    animation-name: moveInDown;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+    & img{
+        width: 4rem;
+    }
+
+    & i{
+        position: absolute;
+        bottom: 1rem;
+        right:3rem;
+        &:hover{
+            color: red;
+            transform: scale(1.1);
+        }
+        @include respond(phone){
+            bottom: 0px;
+            right:10px;
+        }
+    }
+}

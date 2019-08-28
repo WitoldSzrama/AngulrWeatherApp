@@ -1,0 +1,48 @@
+.form-group{
+    text-align: start;
+    height: 100%;
+    margin-right: 3rem;
+
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    
+    @include respond(phone){
+        text-align: center;
+    }
+    &-input{
+        margin:1rem 0;
+        padding:1rem;
+        font-size: 1.5rem;
+        border: none;
+        color:$color-white;
+        background: rgba($color-blue-light, .5);
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .3);
+        &::placeholder{
+            color:$color-grey-dark;
+        }
+        &:focus{
+            outline: none;
+        }
+    }
+    &-btn{
+        margin:1rem 0;
+        padding:1rem;
+        background: linear-gradient(to right,$color-orange-light,$color-orange-dark);
+        border: none;
+        font-size: 1.5rem;
+        color: $color-white;
+
+ 
+        &:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+
+        &:active,
+        &:focus{
+            outline: none;
+        }
+
+    }
+}
